@@ -1,0 +1,26 @@
+﻿@model BookStoreWeb.Models.Domain.Publisher
+
+<div class="container pt-5 pb-5">
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Add Book Publisher</h3>
+            <form asp-controller="Publisher" asp-action="Add" method="post">
+                <div class="form-group pb-2">
+                    <label for="PublisherName">Publisher Name *</label>
+                    <input type="text" class="form-control" placeholder="Enter Publisher" asp-for="PublisherName">
+                    <span asp-validation-for="PublisherName" class="text-danger"></span>
+                </div>
+                @if (TempData["msg"] != null)
+                {
+                    @TempData["msg"]
+                }
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success">Save</button>
+                    <a href="/Publisher/GetAll" class="btn btn-info">List</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+

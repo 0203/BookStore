@@ -7,7 +7,7 @@
             <form asp-controller="Author" asp-action="Add" method="post">
                 <div class="form-group pb-2">
                     <label for="AuthorName">Author Name *</label>
-                    <input type="text" class="form-control" placeholder="Enter Genre" asp-for="AuthorName">
+                    <input type="text" class="form-control" placeholder="Enter Author Name" asp-for="AuthorName">
                     <span asp-validation-for="AuthorName" class="text-danger"></span>
                 </div>
                 @if (TempData["msg"] != null)
